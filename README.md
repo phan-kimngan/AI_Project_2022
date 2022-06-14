@@ -60,8 +60,8 @@ data
 
 At Update Database: Create ID -> Take picture -> **Add to database** for each picture -> **Finish**
 
-At Video Recoding: Choose option -> Load video of zoom at ./data/inputs -> **Start** and waiting a few minutes
+At Video Recoding: Choose option -> Load video of zoom at ./data/inputs -> **Start** and wait a few minutes -> **I want** for *Do you want to add the profile of new students?* question to add a new student if available
 
-At Webcam: choose option -> **Start** -> **Analysis** to show attendance report at this time -> **Stop**
+At Webcam: choose option -> **Start** -> **Analysis** to show attendance report at this time -> **Stop** -> **I want** for *Do you want to add the profile of new students?* question to add a new student if available
 
 At System Cloud: choose option -> Choose Date -> choose directories to show video result. You can edit path_csv line in zoom.py where ./Downloads/ of your path to show the CSV reports at At System Cloud page when you downloaded the CSV reports
