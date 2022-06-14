@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import os
 from streamlit_webrtc import VideoTransformerBase
-#ref: https://github.com/Creatrohit9/Face-Emotion-Recognition
 from streamlit_webrtc import webrtc_streamer,  WebRtcMode
 import numpy as np
 from tensorflow.keras.models import load_model
