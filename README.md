@@ -14,3 +14,5 @@ pip install -r requirements.txt
 conda activate new_env
 
 ### How to use?
+
+You create a folder named **data** containing **inputs** and **outputs** folders
