@@ -1,7 +1,7 @@
 #  AI PROJECT 2022
 Prof: Hyung–Jeong Yang
 ## Task: Combining Video Class Solution with Face Recognition Solution
-Name: Kim Ngan Ngan
+Name: Kim Ngan Phan
 
 ID: 217161
 
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 + The **outputs** directory contains **webcam** and **video_recorder** sub-directories. Each sub-directory continuously contains sub-directories according to datetime at the system runs. They contain mp4 and h264 result files for both video recording and webcam.
 
-See  example structure for *the final report* as below:
+See  example structure as below:
 ```
 data
 ├── data
