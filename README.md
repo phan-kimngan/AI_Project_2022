@@ -52,3 +52,4 @@ data
 
 + Activate project_ai_env environment
 
++ Run streamlit run main.py
