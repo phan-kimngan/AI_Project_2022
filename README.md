@@ -1,6 +1,8 @@
 #  AI PROJECT 2022
+Prof: Hyung–Jeong Yang
 ## Task: Combining Video Class Solution with Face Recognition Solution
 Name: Kim Ngan Ngan
+
 
 ### Set up environment
 + Create a python project_ai_env environment using conda or other tools.
