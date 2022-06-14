@@ -50,8 +50,17 @@ data
 
 + Put demo video into ./data/inputs such as test.mp4
 
+
+
 + Activate project_ai_env environment
 
 + Run streamlit run main.py
 
 <img src="interface.png" alt="output" style="zoom:25%;" />
+At Update Database: Create ID -> Take picture -> **Add to database** for each picture -> **Finish**
+
+At Video Recoding: Choose option -> Load video of zoom at ./data/inputs -> **Start** and waiting a few minutes
+
+At Webcam: choose option -> **Start** -> **Analysis** to show attendance report at this time -> **Stop**
+
+At System Cloud: choose option -> Choose Date -> choose directories to show video result. You can edit path_csv line in zoom.py where ./Downloads/ of your path to show the CSV reports at At System Cloud page when you downloaded the CSV reports
