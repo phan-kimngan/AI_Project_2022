@@ -5,7 +5,7 @@ In this folder, you create a new folder named **students** where can store sub-f
 In students folder:
 + Create a sub-folder named "unknown" for detecting new students
 + Other folders can be created by the system
-+ 
+
 You can see below structure:
 ```
 recog
