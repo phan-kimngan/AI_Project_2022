@@ -57,6 +57,7 @@ data
 + Run streamlit run main.py
 
 <img src="interface.png" alt="output" style="zoom:25%;" />
+
 At Update Database: Create ID -> Take picture -> **Add to database** for each picture -> **Finish**
 
 At Video Recoding: Choose option -> Load video of zoom at ./data/inputs -> **Start** and waiting a few minutes
