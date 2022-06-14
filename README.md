@@ -3,26 +3,26 @@
 Name: Kim Ngan Ngan
 
 ### Set up environment
-+ Create a python new_env environment using conda or other tools.
++ Create a python project_ai_env environment using conda or other tools.
 
-+ Activate new_env environment
++ Activate project_ai_env environment
 ```bash
-conda activate new_env
+conda activate project_ai_env
 ```
 + Instead packages in requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
 
-### How to use?
+### Structure of Project
 
-You create a directory named **data** that contains the **inputs** and **outputs** sub-folders. 
+- Create a directory named **data** that contains the **inputs** and **outputs** directories. 
 
-+ The **input** sub-folder contains mp4 files for video recording. That means you must select the mp4 file when the system runs the recognition based on the video recording. 
++ The **input** directory contains mp4 files for video recording. That means you must select the mp4 file when the system runs the recognition based on the video recording. 
 
-+ The **outputs** sub-folder contains **webcam** and **video_recorder** sub-folders. Each sub-folder contains sub-folders according to datetime at the system runs. They contain mp4 and h264 result files for both video recording and webcam.
++ The **outputs** directory contains **webcam** and **video_recorder** sub-directories. Each sub-directory continuously contains sub-directories according to datetime at the system runs. They contain mp4 and h264 result files for both video recording and webcam.
 
-You can see  example structure for the final report as below:
+See  example structure for *the final report* as below:
 ```
 data
 ├── data
@@ -41,3 +41,14 @@ data
 │             ├── h264_2022-06-13_16-48-33.mp4 <-- created by running system
 ├── ...
 ```
+- Read the README at recog for more instructions
+
+### Project Demo
++ Make inputs and outputs directories at data
+
++ Make students directory at recog
+
++ Put demo video into ./data/inputs such as test.mp4
+
++ Activate project_ai_env environment
+
