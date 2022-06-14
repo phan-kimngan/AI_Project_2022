@@ -80,7 +80,7 @@ class VideoTransformer_emotion(VideoTransformerBase):
             #faces = detector.detectMultiScale(gray,1.6,4)
             preds_svm_list = []
             for i in faces:
-                x, y, w, h = i
+                x, y, w, h = i['box']
                 cv2.rectangle(frame,(x,y), (x+w, y+h), (0,255, 0), 2)
                 face = gray[y:y + h, x:x + w]
                 face_ = frame[y:y + h, x:x + w]
