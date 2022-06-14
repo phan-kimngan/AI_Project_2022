@@ -42,7 +42,7 @@ data
 │             ├── h264_datetime2.mp4 <-- created by running system
 │           ├── datetime3 <-- created by running system
 │             ├── datetime3.mp4 <-- created by running system
-│             ├── datetime3.mp4 <-- created by running system
+│             ├── h264_datetime3.mp4 <-- created by running system
 ├── ...
 ```
 - Read the README at recog for more instructions
