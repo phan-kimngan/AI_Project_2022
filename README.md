@@ -33,16 +33,16 @@ data
 │   ├── inputs
 │   └── outputs
 │       ├── video_recorder
-│           ├── 2022-06-13_16-52-11 <-- created by running system
-│             ├── 2022-06-13_16-52-11.mp4 <-- created by running system
-│             ├── h264_2022-06-13_16-52-11.mp4 <-- created by running system
+│           ├── datetime1 <-- created by running system
+│             ├── datetime1.mp4 <-- created by running system
+│             ├── h264_datetime1.mp4 <-- created by running system
 │       ├── webcam
-│           ├── 2022-06-13_16-40-43 #created by running system
-│             ├── 2022-06-13_16-40-43.mp4 <-- created by running system
-│             ├── h264_2022-06-13_16-40-43.mp4 <-- created by running system
-│           ├── 2022-06-13_16-48-33 <-- created by running system
-│             ├── 2022-06-13_16-48-33.mp4 <-- created by running system
-│             ├── h264_2022-06-13_16-48-33.mp4 <-- created by running system
+│           ├── datetime2 #created by running system
+│             ├── datetime2.mp4 <-- created by running system
+│             ├── h264_datetime2.mp4 <-- created by running system
+│           ├── datetime3 <-- created by running system
+│             ├── datetime3.mp4 <-- created by running system
+│             ├── datetime3.mp4 <-- created by running system
 ├── ...
 ```
 - Read the README at recog for more instructions
