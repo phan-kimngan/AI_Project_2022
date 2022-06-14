@@ -14,9 +14,11 @@ recog
 │   ├── student_ID1 <- make available
 │     ├── img1.jpg
 │     ├── img2.jpg
+│     └── ...
 │   ├── student_ID2 <- make available
 │     ├── img1.jpg
 │     ├── img2.jpg
+│     └── ...
 │   └── ... <- add by running system
 ├── ...
 ```
