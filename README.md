@@ -5,14 +5,15 @@ Name: Kim Ngan Ngan
 ### Set up environment
 + Create a python new_env environment using conda or other tools.
 
-+ Instead packages in requirements.txt
-```bash
-pip install -r requirements.txt
-```
 + Activate new_env environment
 ```bash
 conda activate new_env
 ```
++ Instead packages in requirements.txt
+```bash
+pip install -r requirements.txt
+```
+
 ### How to use?
 
 You create a directory named **data** that contains the **inputs** and **outputs** sub-folders. 
