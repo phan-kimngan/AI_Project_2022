@@ -1,7 +1,6 @@
 import cv2
 from streamlit_webrtc import VideoTransformerBase
 from tensorflow.keras.models import load_model
-import numpy as np
 import streamlit as st
 from mtcnn.mtcnn import MTCNN
 from recog.inception_resnet_v1 import InceptionResNetV1
@@ -37,9 +36,8 @@ def update(data):
     return trainx, trainy
 def save_out(run_version_training):
     if not os.path.exists("./data/outputs/webcam/" + run_version_training):
-        os.makedirs("./data/outputs_test/webcam/" + run_version_training)
         os.makedirs("./data/outputs/webcam/" + run_version_training)
-    output_path_video = "./data/outputs_test/webcam/" + run_version_training +"/" + run_version_training + ".mp4"
+    output_path_video = "./data/outputs/webcam/" + run_version_training +"/" + run_version_training + ".mp4"
     out = cv2.VideoWriter(output_path_video, cv2.VideoWriter_fourcc(*'mp4v'), 150, (640, 480))
     return out
 
@@ -48,7 +46,7 @@ model = load_model('final_model.h5')
 model_reg = InceptionResNetV1(input_shape=(160, 160, 3),
                       classes=128,
                       dropout_keep_prob=0.8,
-                      weights_path='facenet_weights.h5')
+                      weights_path='./recog/facenet_weights.h5')
 
 in_encode = Normalizer(norm='l2')
 out_encode = LabelEncoder()
@@ -75,11 +73,11 @@ class VideoTransformer_emotion(VideoTransformerBase):
         def transform(self, frame):
             frame = frame.to_ndarray(format="bgr24")
             class_labels = ['Angry','Disgust','Fear','Happy','Neutral', 'Sad', 'Surprise']
-            #detector = MTCNN()
-            detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+            detector = MTCNN()
+            #detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
             gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-            #faces = detector.detect_faces(frame)
-            faces = detector.detectMultiScale(gray,1.6,4)
+            faces = detector.detect_faces(frame)
+            #faces = detector.detectMultiScale(gray,1.6,4)
             preds_svm_list = []
             for i in faces:
                 x, y, w, h = i
@@ -179,14 +177,14 @@ class VideoTransformer_attendance(VideoTransformerBase):
         def transform(self, frame):
             frame = frame.to_ndarray(format="bgr24")
             class_labels = ['Angry','Disgust','Fear','Happy','Neutral', 'Sad', 'Surprise']
-            #detector = MTCNN()
-            detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+            detector = MTCNN()
+            #detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
             gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-            #faces = detector.detect_faces(frame)
-            faces = detector.detectMultiScale(gray,1.6,4)
+            faces = detector.detect_faces(frame)
+            #faces = detector.detectMultiScale(gray,1.6,4)
             preds_svm_list = []
             for i in faces:
-                x, y, w, h = i
+                x, y, w, h = i['box']
                 cv2.rectangle(frame,(x,y), (x+w, y+h), (0,255, 0), 2)
                 face = gray[y:y + h, x:x + w]
                 face_ = frame[y:y + h, x:x + w]
@@ -281,14 +279,14 @@ class VideoTransformer_both(VideoTransformerBase):
         def transform(self, frame):
             frame = frame.to_ndarray(format="bgr24")
             class_labels = ['Angry','Disgust','Fear','Happy','Neutral', 'Sad', 'Surprise']
-            #detector = MTCNN()
-            detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+            detector = MTCNN()
+            #detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
             gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-            #faces = detector.detect_faces(frame)
-            faces = detector.detectMultiScale(gray,1.6,4)
+            faces = detector.detect_faces(frame)
+            #faces = detector.detectMultiScale(gray,1.6,4)
             preds_svm_list = []
             for i in faces:
-                x, y, w, h = i
+                x, y, w, h = i['box']
                 cv2.rectangle(frame,(x,y), (x+w, y+h), (0,255, 0), 2)
                 face = gray[y:y + h, x:x + w]
                 face_ = frame[y:y + h, x:x + w]
@@ -360,8 +358,6 @@ class VideoTransformer_both(VideoTransformerBase):
 
             self.df["Date"] = self.df["Date"].replace(np.nan, str(0.0000))
             self.df["Join time"] = self.df["Join time"].replace(np.nan, str(0.0000))
-            #st.write("Class has {} participants in duration: {} ".format(len(self.ids), ", ".join(self.ids)))
-            #st.write("Video duration is {} seconds".format(total_time))
 
             return self.df
         def run_version(self):

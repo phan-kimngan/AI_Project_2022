@@ -5,15 +5,14 @@ import streamlit as st
 from recog.load_emb_data import main
 from configparser import ConfigParser
 
-
-
 def app():
 
     config_object = ConfigParser()
     config_object.read("config.ini")
     unknown = config_object["UNKNOWN"]
     unknown["unknown"] = "None"
-
+    with open('config.ini', 'w') as conf:
+        config_object.write(conf)
 
     with open('config.ini', 'w') as conf:
         config_object.write(conf)
@@ -61,7 +60,6 @@ def app():
         picture = st.camera_input("Take a picture from webcam")
         if picture is not None:
             newpath = r'./recog/students/' + title
-            #k = 0
             if not os.path.exists(newpath):
                 os.makedirs(newpath)
             st.write("Got an image from the webcam:")
@@ -86,3 +84,5 @@ def app():
                 st.write("Updated database")
     click = config_object["CLICK"]
     click["click"] = "1"
+    with open('config.ini', 'w') as conf:
+        config_object.write(conf)

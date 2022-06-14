@@ -3,19 +3,17 @@ import pandas as pd
 from PIL import  Image
 import webcams
 import zoom
-import video_recording_save
+import video_recording
 import os
 import update
-import plotly.graph_objects as go
 from bokeh.models.widgets import Div
 from recog.load_emb_data import main
 import pickle as pkle
 import os.path
-from cfg import cfg
 from configparser import ConfigParser
 PAGES = {
     "Update Database": update,
-    "Video Recoding": video_recording_save,
+    "Video Recoding": video_recording,
     "Webcam": webcams,
     "System Cloud": zoom,
 
@@ -55,12 +53,7 @@ click = config_object["CLICK"]["click"]
 selection = st.sidebar.radio("Go to", list(PAGES.keys()), index = int(click))
 page = PAGES[selection]
 page.app()
-#unknown = config_object["UNKNOWN"]
-#unknown["unknown"] = "None"
-#click = config_object["CLICK"]
-#click["click"] = "0"
-#with open('config.ini', 'w') as conf:
-    #config_object.write(conf)
+
 #-----------------
 
 st.sidebar.button("Log Out ")
