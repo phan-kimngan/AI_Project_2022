@@ -2,8 +2,8 @@ You can download the weight of Facenet at the link and put into here: https://dr
 
 In this folder, you create a new directory named **students** where can store sub-directories according to the ID of students. Each sub-directory contains pictures of each student ID. 
 
-In **students** directories:
-+ Create a sub-directories named "unknown" for detecting new students
+In **students** directory:
++ Create a sub-directory named "unknown" for detecting new students
 + Initialize requires at least 2 sub-directories with student photos available, other directories can be created by the system
 
 You can see below structure:
