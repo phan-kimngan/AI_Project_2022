@@ -54,4 +54,4 @@ data
 
 + Run streamlit run main.py
 
-<img src="interface.png" alt="output" style="zoom:55%;" />
+<img src="interface.png" alt="output" style="zoom:25%;" />
