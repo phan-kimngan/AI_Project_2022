@@ -2,6 +2,7 @@
 Prof: Hyung–Jeong Yang
 ## Task: Combining Video Class Solution with Face Recognition Solution
 Name: Kim Ngan Ngan
+ID: 217161
 
 
 ### Set up environment
