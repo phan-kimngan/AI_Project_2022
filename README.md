@@ -46,13 +46,15 @@ data
 ### Project Demo
 + Make **inputs** and **outputs** directories at **data**
 
-+ Make **students** directory at **recog**
++ Make **students** directory at **recog** and make sure as instructed
 
 + Put demo video into ./data/inputs such as test.mp4
 
 + Activate project_ai_env environment
 
-+ Run command: streamlit run main.py
++ Run command: *python initialize.py* to create **dataset-embeddings.npz** file at **recog**
+
++ Run command: *streamlit run main.py*
 
 <img src="interface.png" alt="output" style="zoom:25%;" />
 
