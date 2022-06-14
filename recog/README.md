@@ -7,8 +7,8 @@ In students folder:
 + Other folders can be created by the system
 + 
 You can see below structure:
-recog
 ```
+recog
 ├── students
 │   ├── unknown
 │   └── ...
