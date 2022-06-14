@@ -53,3 +53,5 @@ data
 + Activate project_ai_env environment
 
 + Run streamlit run main.py
+
+<img src="outputs/output.png" alt="output" style="zoom:55%;" />
