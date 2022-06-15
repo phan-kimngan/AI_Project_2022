@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 - Create a directory named **data** that contains the **inputs** and **outputs** directories. 
 
-+ The **input** directory contains mp4 files for video recording. That means you must select the mp4 file when the system runs the recognition based on the video recording. 
++ The **inputs** directory contains mp4 files for video recording. That means you must select the mp4 file when the system runs the recognition based on the video recording. 
 
 + The **outputs** directory contains **webcam** and **video_recorder** sub-directories. Each sub-directory continuously contains sub-directories according to datetime at the system runs. They contain mp4 and h264 result files for both video recording and webcam.
 
