@@ -1,4 +1,4 @@
-#  AI PROJECT 2022
+#  Subject: AI PROJECT 2022
 
 Prof: Hyung–Jeong Yang
 
