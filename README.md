@@ -45,7 +45,7 @@ data
 │             ├── h264_datetime3.mp4 <-- created by running system
 ├── ...
 ```
-- Read the README at recog for more instructions
+- Read the README file at **recog** for more instructions
 
 ### Project Demo
 + Make **inputs** and **outputs** directories at **data**
