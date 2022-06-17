@@ -41,15 +41,16 @@ data
 │       ├── video_recorder
 │           ├── datetime1 <-- created by running system
 │             ├── datetime1.mp4 <-- created by running system
-│             ├── h264_datetime1.mp4 <-- created by running system
-│       ├── webcam
+│             └── h264_datetime1.mp4 <-- created by running system
+|           └── ...
+│       └── webcam
 │           ├── datetime2 #created by running system
 │             ├── datetime2.mp4 <-- created by running system
-│             ├── h264_datetime2.mp4 <-- created by running system
+│             └── h264_datetime2.mp4 <-- created by running system
 │           ├── datetime3 <-- created by running system
 │             ├── datetime3.mp4 <-- created by running system
-│             ├── h264_datetime3.mp4 <-- created by running system
-├── ...
+│             └── h264_datetime3.mp4 <-- created by running system
+│           └── ...
 ```
 - Read the README file at **recog** for more instructions
 
